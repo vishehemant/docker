@@ -1,0 +1,22 @@
+FROM node:20-alpine
+
+LABEL maintainer="docker-lab"
+LABEL version="1.0"
+
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+
+WORKDIR /app
+
+COPY package.json ./
+RUN npm install --production
+
+COPY --chown=appuser:appgroup server.js ./
+
+USER appuser
+
+HEALTHCHECK --interval=30s --timeout=3s --retries=3 \
+  CMD wget -qO- http://localhost:3000/health || exit 1
+
+EXPOSE 3000
+
+CMD ["node", "server.js"]

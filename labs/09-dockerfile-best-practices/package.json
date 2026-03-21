@@ -1,0 +1,9 @@
+{
+  "name": "best-practices-lab",
+  "version": "1.0.0",
+  "description": "Dockerfile best practices comparison",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "docker-compose-lab",
+  "version": "1.0.0",
+  "description": "Multi-service app for Docker Compose lab",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}

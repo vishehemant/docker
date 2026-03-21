@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker Layers Lab</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 600px;
+            margin: 80px auto;
+            padding: 0 20px;
+            background: #0d1117;
+            color: #c9d1d9;
+        }
+        h1 { color: #58a6ff; }
+        .layer-box {
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 12px 16px;
+            margin: 8px 0;
+            background: #161b22;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lab 01: Docker Image Layers</h1>
+    <p>This page is served from a custom Docker image built with multiple layers.</p>
+    <div class="layer-box">Layer 1 — Base image (nginx:alpine)</div>
+    <div class="layer-box">Layer 2 — RUN apk add curl</div>
+    <div class="layer-box">Layer 3 — COPY index.html</div>
+    <p>Try editing this file and rebuilding to see how layer caching works!</p>
+</body>
+</html>

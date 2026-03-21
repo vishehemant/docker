@@ -1,0 +1,9 @@
+{
+  "name": "port-binding-lab",
+  "version": "1.0.0",
+  "description": "Simple HTTP server for the port binding lab",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
